@@ -15,41 +15,40 @@
   <meta name="twitter:image" content="https://itch.zone" />
 
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #130000;
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
+    }
+
+    /* Keeps the game fluid, perfectly scaled, and centered on all device displays */
+    .game-wrapper {
+      width: 100vw;
       height: 100vh;
-      background-color: #130000;
-      overflow: hidden;
+      max-width: 640px;
+      max-height: 380px;
+      aspect-ratio: 640 / 380;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    /* This wrapper acts as a bounding box that scales down on small screens */
-    .game-container {
-      position: relative;
+    iframe {
       width: 100%;
-      max-width: 640px; /* Locked to desktop size on computer monitors */
-      aspect-ratio: 640 / 380; /* Maintains perfect game proportions on phones */
-      overflow: hidden;
-    }
-
-    .game-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      /* Extends the iframe slightly down to crop out the bottom itch.io watermark */
-      height: calc(100% + 40px); 
-      border: 0;
+      height: 100%;
+      border: none;
     }
   </style>
 </head>
 <body>
 
-  <!-- The container fixes the alignment issues and hides the watermark -->
-  <div class="game-container">
+  <div class="game-wrapper">
     <iframe src="https://itch.io" allowfullscreen="">
       <a href="https://itch.io">Play DAIGOO on itch.io</a>
     </iframe>
