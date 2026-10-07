@@ -8,15 +8,15 @@
   <!-- Tells X to use the interactive player layout -->
   <meta name="twitter:card" content="player" />
   <meta name="twitter:title" content="Play DAIGOO!" />
-  <meta name="twitter:description" content="Click to load and play DAIGOO right inside your feed!" />
+  <meta name="twitter:description" content="Check out DAIGOO right inside your feed!" />
   
-  <!-- The direct upload engine link -->
+  <!-- 1. YOUR EMBED WIDGET LINK FOR X METADATA -->
   <meta name="twitter:player" content="https://itch.io" />
-  <meta name="twitter:player:width" content="640" />
-  <meta name="twitter:player:height" content="380" />
+  <meta name="twitter:player:width" content="552" />
+  <meta name="twitter:player:height" content="167" />
   
-  <!-- Your exact game cover artwork link -->
-  <meta name="twitter:image" content="https://img.itch.zone/aW1nLzMwNDU5Nzg1LmpwZWc=/180x143%23c/h%2F4cRv.jpeg" />
+  <!-- 2. YOUR EXACT GAME COVER ARTWORK LINK -->
+  <meta name="twitter:image" content="https://itch.zone" />
 
   <style>
     html, body {
@@ -31,13 +31,13 @@
       overflow: hidden;
     }
 
-    /* Creates a responsive window that dynamically scales down on mobile screens */
-    .responsive-game-box {
+    /* Keeps your custom widget perfectly scaled and responsive across mobile sizes */
+    .responsive-widget-box {
       width: 100vw;
       height: 100vh;
-      max-width: 640px;
-      max-height: 380px;
-      aspect-ratio: 640 / 380; /* Maintains 16:10 format proportions perfectly */
+      max-width: 552px;
+      max-height: 167px;
+      aspect-ratio: 552 / 167;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -52,10 +52,10 @@
 </head>
 <body>
 
-  <!-- Wraps the game inside a fluid canvas container -->
-  <div class="responsive-game-box">
-    <iframe src="https://itch.io" allowfullscreen="">
-      <a href="https://daigotenno.itch.io/daigoo">Play DAIGOO on itch.io</a>
+  <!-- 3. YOUR EXACT IFRAME CODE TO PREVENT BLOCKING ERRORS -->
+  <div class="responsive-widget-box">
+    <iframe frameborder="0" src="https://itch.io" width="552" height="167">
+      <a href="https://itch.io">DAIGOO by daigotenno</a>
     </iframe>
   </div>
 
