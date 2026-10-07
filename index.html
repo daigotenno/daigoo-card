@@ -2,29 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Play DAIGOO!</title>
 
   <!-- Tells X to use the interactive player layout -->
   <meta name="twitter:card" content="player" />
   <meta name="twitter:title" content="Play DAIGOO!" />
   <meta name="twitter:description" content="Click to load and play DAIGOO right inside your feed!" />
-  
-  <!-- 1. ALREADY MATCHED: This is the exact 'Direct link' from your screenshot -->
-  <meta name="twitter:player" content="https://itch.io/embed-upload/19516690?color=130000" />
-  
-  <!-- 2. ALREADY MATCHED: These are the exact 640x380 sizes from your screenshot -->
+  <meta name="twitter:player" content="https://itch.io" />
   <meta name="twitter:player:width" content="640" />
   <meta name="twitter:player:height" content="380" />
-  
-  <!-- 3. ACTION REQUIRED: Change this placeholder to a link of a screenshot/picture of your game -->
-  <meta name="twitter:image" content="https://img.itch.zone/aW1nLzMwNDU5Nzg1LmpwZWc=/180x143%23c/h%2F4cRv.jpeg" />
-</head>
-<body style="margin:0; padding:0; display:flex; justify-content:center; align-items:center; height:100vh; background-color:#130000;">
+  <meta name="twitter:image" content="https://itch.zone" />
 
-  <!-- Your exact iframe embed code so the game works if someone clicks the link directly -->
-  <iframe frameborder="0" src="https://itch.io/embed-upload/19516690?color=130000" allowfullscreen="" width="640" height="380">
-    <a href="https://daigotenno.itch.io/daigoo">Play DAIGOO on itch.io</a>
-  </iframe>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #130000;
+      overflow: hidden;
+    }
+
+    /* This wrapper acts as a bounding box that scales down on small screens */
+    .game-container {
+      position: relative;
+      width: 100%;
+      max-width: 640px; /* Locked to desktop size on computer monitors */
+      aspect-ratio: 640 / 380; /* Maintains perfect game proportions on phones */
+      overflow: hidden;
+    }
+
+    .game-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      /* Extends the iframe slightly down to crop out the bottom itch.io watermark */
+      height: calc(100% + 40px); 
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- The container fixes the alignment issues and hides the watermark -->
+  <div class="game-container">
+    <iframe src="https://itch.io" allowfullscreen="">
+      <a href="https://itch.io">Play DAIGOO on itch.io</a>
+    </iframe>
+  </div>
 
 </body>
 </html>
