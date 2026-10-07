@@ -9,10 +9,14 @@
   <meta name="twitter:card" content="player" />
   <meta name="twitter:title" content="Play DAIGOO!" />
   <meta name="twitter:description" content="Click to load and play DAIGOO right inside your feed!" />
+  
+  <!-- The direct upload engine link -->
   <meta name="twitter:player" content="https://itch.io" />
   <meta name="twitter:player:width" content="640" />
   <meta name="twitter:player:height" content="380" />
-  <meta name="twitter:image" content="https://itch.zone" />
+  
+  <!-- Your exact game cover artwork link -->
+  <meta name="twitter:image" content="https://img.itch.zone/aW1nLzMwNDU5Nzg1LmpwZWc=/180x143%23c/h%2F4cRv.jpeg" />
 
   <style>
     html, body {
@@ -27,13 +31,13 @@
       overflow: hidden;
     }
 
-    /* Keeps the game fluid, perfectly scaled, and centered on all device displays */
-    .game-wrapper {
+    /* Creates a responsive window that dynamically scales down on mobile screens */
+    .responsive-game-box {
       width: 100vw;
       height: 100vh;
       max-width: 640px;
       max-height: 380px;
-      aspect-ratio: 640 / 380;
+      aspect-ratio: 640 / 380; /* Maintains 16:10 format proportions perfectly */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -48,9 +52,10 @@
 </head>
 <body>
 
-  <div class="game-wrapper">
+  <!-- Wraps the game inside a fluid canvas container -->
+  <div class="responsive-game-box">
     <iframe src="https://itch.io" allowfullscreen="">
-      <a href="https://itch.io">Play DAIGOO on itch.io</a>
+      <a href="https://daigotenno.itch.io/daigoo">Play DAIGOO on itch.io</a>
     </iframe>
   </div>
 
