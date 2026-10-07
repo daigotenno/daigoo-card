@@ -1,2 +1,0 @@
-# daigoo-card
-game
